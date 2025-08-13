@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class NotificacaoService {
-  private socket = io('http://localhost:3000');
+  private socket = io('http://localhost:8080');
 
   constructor(private http: HttpClient) {}
 
   enviarNotificacao(mensagemId: string, conteudoMensagem: string) {
-    return this.http.post('http://localhost:3000/api/notificar', {
+    return this.http.post('http://localhost:8080/api/notificar', {
       mensagemId,
       conteudoMensagem,
     });
