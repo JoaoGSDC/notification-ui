@@ -1,0 +1,8 @@
+<input [(ngModel)]="mensagem" placeholder="Digite a mensagem" />
+<button (click)="enviar()">Enviar Notificação</button>
+
+<ul>
+  @for (notification of notificacoes; track notification.id) {
+  <li>{{ notification.mensagemId }} - {{ notification.status }}</li>
+  }
+</ul>
